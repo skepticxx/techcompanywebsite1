@@ -1,0 +1,234 @@
+nav {
+	display: block;
+	float: right;
+	width: 100%;
+	padding-top: 0px;
+}
+.menu {
+	display: block;
+	padding: 0px;
+	margin-right:-10px;
+	margin:0;
+}
+.menu li {
+	position: relative;
+	z-index: 100;
+	list-style: none;
+	display: inline-block;
+	padding-right: 35px;
+	
+}
+.lastchild {
+	margin-left: 0;
+	padding-right: 0 !important;
+	background-image: none !important;
+}
+.menu li a {
+	transition: all 0.2s ease-in-out 0s;
+	text-decoration: none;
+	color: #7d7d7d;
+	margin-right: 25px;
+	display: inline-block;
+	font-size: 13px;
+
+	border-bottom: 3px solid rgba(255, 255, 255, .0);
+
+	padding: 0 0 5px 0;
+	font-family: 'montserratregular';
+	text-transform:uppercase;
+}
+.menu li a:hover, .menu li:hover>a {
+	color: #4e9b65;
+}
+
+.menu li a:focus{color: #4e9b65;}
+.menu li:last-child {
+	padding-right: 0;
+}
+.menu li:last-child a {
+	margin-right: 0px;
+}
+.menu li.active {
+	color: #5e851b;
+}
+.menu li.active a {
+	color: #4e9b65;
+	border-bottom: 3px solid#71af84;
+}
+.menu a:hover {
+	color: #4e9b65;
+	border-bottom: 3px solid#71af84;
+}
+.menu ul {
+	visibility: hidden;
+	opacity: 0;
+	margin: 0;
+	padding: 0;
+	width: 170px;
+	position: absolute;
+	left: 0px;
+	background: #3aae45;
+	z-index: 99;
+	transform: translate(0, 20px);
+	transition: all 0.2s ease-out;
+	border-radius: 5px;
+}
+.menu ul:after {
+	bottom: 100%;
+	left: 20%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #3aae45;
+	border-width: 6px;
+	margin-left: -6px;
+}
+.menu ul li {
+	display: block;
+	float: none;
+	background: none;
+	margin: 0;
+	padding: 0;
+}
+.menu ul li:last-child {
+	padding-right: 0;
+}
+.menu ul li a {
+	font-size: 12px;
+	font-weight: normal;
+	display: block;
+	color: #fff;
+	background: #3aae45;
+	padding: 10px;
+	width: 100%;
+	border: none;
+}
+.menu ul li a:hover, .menu ul li:hover>a {
+	background: #1b9226;
+	color: #fff;
+	border: none;
+}
+.menu li:hover>ul {
+	visibility: visible;
+	opacity: 1;
+	transform: translate(0, 0);
+}
+.menu ul ul {
+	left: 169px;
+	top: 0px;
+	visibility: hidden;
+	opacity: 0;
+	transform: translate(20px, 20px);
+	transition: all 0.2s ease-out;
+}
+.menu ul ul:after {
+	left: -6px;
+	top: 10%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(255, 255, 255, 0);
+	border-right-color: #fff;
+	border-width: 6px;
+	margin-top: -6px;
+}
+.menu li>ul ul:hover {
+	visibility: visible;
+	opacity: 1;
+	transform: translate(0, 0);
+}
+.responsive-menu {
+	background: #638c1c url(../image/menu.png) no-repeat right;
+	display: none;
+	width: 100%;
+	padding: 10px 15px;
+	text-decoration: none;
+	font-size: 14px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 600;
+	-moz-transition: all 0.65s ease-out 0s;
+	-webkit-transition: all 0.65s ease-out 0s;
+}
+.responsive-menu:hover {
+	background: #4b700a url(../image/menu.png) no-repeat right;
+	color: #fff;
+	text-decoration: none;
+}
+a.homer {
+	color: #3aae45;
+}
+ @media (min-width: 768px) and (max-width: 979px) {
+.mainWrap {
+	width: 768px;
+}
+.menu ul {
+	top: 37px;
+}
+.menu li a {
+	font-size: 11px;
+}
+/*a.homer { background: #E95546; }*/
+}
+ @media (max-width: 767px) {
+.mainWrap {
+	width: auto;
+	padding: 50px 20px;
+}
+.menu {
+	display: none;
+	margin: 0 0 20px 0;
+	padding: 0;
+	width:100%;
+}
+.responsive-menu {
+	display: block;
+}
+nav {
+	margin: 0;
+	background: none;
+}
+.menu li {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+.menu li a {
+	background: #fff;
+	color: #797979;
+	padding: 10px;
+	width: 100%;
+}
+.menu li a:hover, .menu li:hover>a {
+	background: #638c1c;
+	color: #fff;
+}
+.menu ul {
+	visibility: hidden;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transform: initial;
+}
+.menu li:hover>ul {
+	visibility: visible;
+	opacity: 1;
+	position: relative;
+	transform: initial;
+}
+.menu ul ul {
+	left: 0;
+	transform: initial;
+}
+.menu li>ul ul:hover {
+	transform: initial;
+}
+}
